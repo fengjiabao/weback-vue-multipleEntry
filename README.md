@@ -1,6 +1,6 @@
 # weback-vue-multipleEntry
 
-**CMS活动页本地开发环境** 
+**webpack编译vue多入口本地开发环境** 
 ***
 **文件目录说明**
 * **src** 项目源码目录  
