@@ -1,7 +1,7 @@
 <template>
     <div>
         我是嵌套组件b {{name}}
-        <button @click="showTest">点我</button>
+        <button @click="showTest">点我11</button>
     </div>
 </template>
   

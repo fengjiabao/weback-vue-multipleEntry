@@ -32,7 +32,7 @@ function getPlugin(){ //todo: add plugin
         pluginArr.push(new HtmlWebpackPlugin(pluginParams[i]))
     }
     pluginArr.push(new VueLoaderPlugin());
-    pluginArr.push(new webpack.HotModuleReplacementPlugin())
+    // pluginArr.push(new webpack.HotModuleReplacementPlugin())
     return pluginArr;
     // console.log('pluginArr',pluginArr)
 }
