@@ -7,14 +7,17 @@ var env = process.env.NODE_ENV;
 
 if (env == 'dev') {
     var options = {        
-        hot: true,        
-        compress: true,
+        hot: true,      
+        inline: true,  
+        // compress: true,
         publicPath: "",
         open: true,
-        stats: {
-            colors: true,
-            chunks: false
-        },
+        overlay: true,
+        stats: "errors-only",
+        // stats: {
+        //     colors: true,
+        //     chunks: false
+        // },
         contentBase: [path.join(__dirname, "src")] 
     };
     var server = new WebpackDevServer(webpack, options);

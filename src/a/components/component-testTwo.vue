@@ -1,6 +1,6 @@
 <template>
     <div>
-        我是嵌套组件{{name}}
+        我是嵌套组件b {{name}}
         <button @click="showTest">点我</button>
     </div>
 </template>
@@ -16,16 +16,9 @@
               pwd : def.pwd
           }
       },
-      mounted(){
-          mapService.on('message',function(data){
-              console.log('on---')
-              console.log('我是接收兄弟组件的数据：',data)
-          })
-      },
       methods: {
         showTest () {
-            console.log('mapSERVIE--',mapService.DataStore)
-            alert(this.name)
+            mapService.trigger('message','senddata')
         }
     }
   }
