@@ -19,6 +19,7 @@
       methods: {
         showTest () {
             mapService.trigger('message','senddata')
+            console.log('mapSERVIE--',mapService.DataStore.get('test'))
         }
     }
   }

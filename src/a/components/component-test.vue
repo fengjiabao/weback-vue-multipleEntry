@@ -24,7 +24,8 @@
       },
       methods: {
         showTest () {
-            console.log('mapSERVIE--',mapService.DataStore)
+            console.log('mapSERVIE--',mapService.DataStore.get('test'))
+            mapService.DataStore.setObjVal('test.a',[1,2])
             alert(this.name)
         }
     }

@@ -11,6 +11,20 @@ var mapService = (function () {
         }
     }
 
+    DataStore.prototype.setObjVal = function (_key, _value) {
+        var objKey = _key.split('.')[0], objChildKey = _key.split('.')[1]
+        var val = this.get(objKey), isJsonObj = this.isJsonObj(val)
+        if (objChildKey && isJsonObj) {
+            val[objChildKey] = _value
+        } else {
+            this.set(_key, _value)
+        }
+    }
+
+    DataStore.prototype.isJsonObj = function (_value) {
+        return typeof (_value) == "object" && Object.prototype.toString.call(_value).toLowerCase() == "[object object]" && !_value.length
+    }
+
     DataStore.prototype.get = function (_key) {
         return !this.hasKey(_key) ? null : this.dataStore[_key]
     }
