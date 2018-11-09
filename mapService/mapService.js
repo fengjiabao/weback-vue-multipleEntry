@@ -1,3 +1,8 @@
+/*
+ * js 数据层
+ * @author fengjiabao
+ * @version 1.0.1
+ */
 var mapService = (function () {
     function DataStore() {
         this.dataStore = {}
